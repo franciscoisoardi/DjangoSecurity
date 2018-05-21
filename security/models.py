@@ -1,3 +1,3 @@
-from django.db import models
+#!/usr/bin/env python
 
-# Create your models here.
+from django.db import models

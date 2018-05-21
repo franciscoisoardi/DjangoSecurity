@@ -1,3 +1,3 @@
-from django.test import TestCase
+#!/usr/bin/env python
 
-# Create your tests here.
+from django.test import TestCase

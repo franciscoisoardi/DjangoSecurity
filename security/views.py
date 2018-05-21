@@ -1,3 +1,3 @@
-from django.shortcuts import render
+#!/usr/bin/env python
 
-# Create your views here.
+from django.shortcuts import render
