@@ -52,6 +52,10 @@ class EstandarAcceso(models.Model):
         null=False, blank=False, verbose_name=_('Tiempo de vencimiento de sesión'),
         help_text=_('Tiempo máximo de inactividad antes de cierre de sesión automática')
     )
+    cantidad_accesos_fallidos = models.SmallIntegerField(
+        null=False, blank=False, verbose_name=_('Cantidad de intentos fallídos de acceso'),
+        help_text=_('Cantidad de intentos fallidos de acceso consecutivos antes de bloquear el usuario')
+    )
 
 
 class Perfil(models.Model):
