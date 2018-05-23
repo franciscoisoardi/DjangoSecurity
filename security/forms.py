@@ -8,9 +8,9 @@ class BootrapModelForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(BootrapModelForm, self).__init__(*args, **kwargs)
-        self.set_bootstrap_class()
+        self.set_bootstrap_attrs()
 
-    def set_bootstrap_class(self):
+    def set_bootstrap_attrs(self):
         for field in self.fields:
             try:
                 self.fields[field].widget.attrs['class'] += ' form-group'
