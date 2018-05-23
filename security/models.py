@@ -5,22 +5,22 @@ from django.utils.translation import gettext_lazy as _
 
 
 COMPLEJIDAD_CLAVE_CHOICES = (
-    0, 'Libre',
-    1, 'Al menos una mayúscula y una minúscula',
-    2, 'Al menos una mayúscula, una minúscula y un número',
-    3, 'Al menos una mayúscula, una minúscula, un número y un sibolo',
+    (0, 'Libre'),
+    (1, 'Al menos una mayúscula y una minúscula'),
+    (2, 'Al menos una mayúscula, una minúscula y un número'),
+    (3, 'Al menos una mayúscula, una minúscula, un número y un sibolo'),
 )
 
 TIPO_CONTACTO_CHOICES = (
-    0, 'Mail',
-    1, 'Teléfono',
+    (0, 'Mail'),
+    (1, 'Teléfono'),
 )
 
 TIPO_DOCUMENTO_CHOICES = (
-    0, 'DNI',
-    1, 'LC',
-    2, 'LE',
-    3, 'Pasaporte',
+    (0, 'DNI'),
+    (1, 'LC'),
+    (2, 'LE'),
+    (3, 'Pasaporte'),
 )
 
 
@@ -112,7 +112,7 @@ class Persona(models.Model):
         Contacto, null=True, blank=True, verbose_name=_('Contactos')
     )
     documentos = models.ManyToManyField(
-        Documento, null=False, blank=False, on_delete=models.PROTECT, verbose_name=_('Documentos')
+        Documento, null=False, blank=False, verbose_name=_('Documentos')
     )
     usuario = models.OneToOneField(
         User, null=False, blank=False, on_delete=models.CASCADE, verbose_name=_('Usuario')
