@@ -63,7 +63,7 @@ class Perfil(models.Model):
         null=False, blank=False, verbose_name=_('Descripción')
     )
     estandar_acceso = models.ForeignKey(
-        EstandarAcceso, null=False, blank=False, verbose_name=_('Estandar de Acceso')
+        EstandarAcceso, null=False, blank=False, on_delete=models.PROTECT, verbose_name=_('Estandar de Acceso')
     )
     permisos = models.ManyToManyField(
         Permission, null=False, blank=False, verbose_name=_('Permisos')
